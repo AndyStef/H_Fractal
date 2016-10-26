@@ -14,6 +14,8 @@
 		8F400DBF1DBD104400E90473 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F400DBD1DBD104400E90473 /* LaunchScreen.storyboard */; };
 		8F400DCA1DBD104400E90473 /* FractalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F400DC91DBD104400E90473 /* FractalTests.swift */; };
 		8F400DD51DBD104400E90473 /* FractalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F400DD41DBD104400E90473 /* FractalUITests.swift */; };
+		8F400DE31DBD105D00E90473 /* FractalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F400DE21DBD105D00E90473 /* FractalView.swift */; };
+		8FD392851DBFFD90005D1DAC /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD392841DBFFD90005D1DAC /* UIAlertView+Blocks.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,10 @@
 		8F400DD01DBD104400E90473 /* FractalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FractalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F400DD41DBD104400E90473 /* FractalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FractalUITests.swift; sourceTree = "<group>"; };
 		8F400DD61DBD104400E90473 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F400DE21DBD105D00E90473 /* FractalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FractalView.swift; sourceTree = SOURCE_ROOT; };
+		8FD392831DBFFD8F005D1DAC /* Fractal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fractal-Bridging-Header.h"; sourceTree = "<group>"; };
+		8FD392841DBFFD90005D1DAC /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		8FD392861DBFFE2B005D1DAC /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +103,16 @@
 		8F400DB31DBD104400E90473 /* Fractal */ = {
 			isa = PBXGroup;
 			children = (
+				8F400DE21DBD105D00E90473 /* FractalView.swift */,
 				8F400DB41DBD104400E90473 /* AppDelegate.swift */,
+				8FD392841DBFFD90005D1DAC /* UIAlertView+Blocks.m */,
+				8FD392861DBFFE2B005D1DAC /* UIAlertView+Blocks.h */,
 				8F400DB61DBD104400E90473 /* ViewController.swift */,
 				8F400DB81DBD104400E90473 /* Main.storyboard */,
 				8F400DBB1DBD104400E90473 /* Assets.xcassets */,
 				8F400DBD1DBD104400E90473 /* LaunchScreen.storyboard */,
 				8F400DC01DBD104400E90473 /* Info.plist */,
+				8FD392831DBFFD8F005D1DAC /* Fractal-Bridging-Header.h */,
 			);
 			path = Fractal;
 			sourceTree = "<group>";
@@ -193,6 +203,7 @@
 				TargetAttributes = {
 					8F400DB01DBD104400E90473 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = Q562T6NCPA;
 					};
 					8F400DC41DBD104400E90473 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -256,6 +267,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F400DE31DBD105D00E90473 /* FractalView.swift in Sources */,
+				8FD392851DBFFD90005D1DAC /* UIAlertView+Blocks.m in Sources */,
 				8F400DB71DBD104400E90473 /* ViewController.swift in Sources */,
 				8F400DB51DBD104400E90473 /* AppDelegate.swift in Sources */,
 			);
@@ -401,10 +414,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Fractal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AS.Fractal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Fractal/Fractal-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -412,10 +432,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Fractal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AS.Fractal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Fractal/Fractal-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -484,6 +510,7 @@
 				8F400DDB1DBD104400E90473 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8F400DDC1DBD104400E90473 /* Build configuration list for PBXNativeTarget "FractalTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +519,7 @@
 				8F400DDE1DBD104400E90473 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8F400DDF1DBD104400E90473 /* Build configuration list for PBXNativeTarget "FractalUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +528,7 @@
 				8F400DE11DBD104400E90473 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
